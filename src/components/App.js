@@ -1,15 +1,20 @@
 import React from 'react'
 
 const App = () => {
-    const arr=["A","B","C"]
+  const relatives = ["Relative A", "Relative B", "Relative C"];
+
   return (
-    <div>
-        <ol id='relativeList'>
-        {arr.map((el,i)=>
-            //<li id={`relativeListItem${i+1}`} key={`relativeListItem${i+1}`}>{el}</li>
-            <li key={`relativeListItem${i+1}`}>{el}</li>
-        )}
-        </ol>
+    <div id="main">
+      <ol id="relativeList" key="relativeList">
+        {relatives.map((relative, index) => (
+          <li 
+            id={`relativeListItem${index + 1}`} 
+            key={`relativeListItem${index + 1}`}
+          >
+            {relative}
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
